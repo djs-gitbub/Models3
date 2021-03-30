@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'dbase/dbase.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>dbase.html</h1>
+
+    <a href = "{%url 'home' %}" >Back to Home</a>
+    <br>
+    <br>
+    <div class = 'books_table'>
+        {% if books %}
+        <table>
+            <thead>
+                <th>Year</th>
+                <th>Author</th>
+                <th>Title</th>
+                <th>Genre</th>
+            </thead>
+        
+        {% for item in books %}
+        <tr>
+            <td> {{ item.year }} </td>
+            <td> {{ item.author }} </td>
+            <td> {{ item.title }} </td>
+            <td> {{ item.genre }} </td>
+        </tr>
+        {% endfor %}
+
+        </table>
+        {% else %}
+        <p>No Data</p>
+        {% endif %}
+    
+    </div>
+    
+    
+</body>
+</html>

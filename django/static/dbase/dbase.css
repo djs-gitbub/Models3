@@ -1,0 +1,15 @@
+/* table {
+    border: 2px solid black;
+} */
+
+th, td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 25px;
+    background: rgb(232, 236, 237);
+}
+
+td {
+    text-transform: capitalize;
+}
